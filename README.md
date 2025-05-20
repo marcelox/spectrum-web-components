@@ -1,3 +1,95 @@
+# Keeping This Fork in Sync with Upstream (`spectrum-web-components`)
+
+This repository is a fork of [adobe/spectrum-web-components](https://github.com/adobe/spectrum-web-components). This guide explains how to keep this fork up to date with the upstream repository.
+
+## 🔧 Setup (One-Time)
+
+1. **Clone your fork:**
+
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/spectrum-web-components.git
+    cd spectrum-web-components
+    ```
+
+2. **Add the upstream remote:**
+
+    ```bash
+    git remote add upstream https://github.com/adobe/spectrum-web-components.git
+    ```
+
+3. **Confirm remotes:**
+
+    ```bash
+    git remote -v
+    ```
+
+    You should see:
+
+    ```
+    origin    https://github.com/YOUR_USERNAME/spectrum-web-components.git (fetch)
+    upstream  https://github.com/adobe/spectrum-web-components.git (fetch)
+    ```
+
+---
+
+## 🔄 Syncing with Upstream
+
+To update your local fork with the latest changes from the original repository:
+
+1. **Fetch upstream updates:**
+
+    ```bash
+    git fetch upstream
+    ```
+
+2. **Switch to the main branch:**
+
+    ```bash
+    git checkout main
+    ```
+
+3. **Merge or rebase the upstream changes:**
+
+    **Option A: Merge (safer, preserves history):**
+
+    ```bash
+    git merge upstream/main
+    ```
+
+    **Option B: Rebase (cleaner history, more advanced):**
+
+    ```bash
+    git rebase upstream/main
+    ```
+
+4. **Push the updated main branch to your fork:**
+    ```bash
+    git push origin main
+    ```
+
+---
+
+## 💡 Best Practices
+
+- Use feature branches (`git checkout -b feature/my-feature`) for new work.
+- Pull from upstream often to avoid conflicts.
+- Rebase your branches onto `main` before opening a pull request.
+- Keep `main` clean and in sync with upstream.
+
+---
+
+## 🚀 Optional: GitHub CLI Automation
+
+If you use [GitHub CLI](https://cli.github.com/):
+
+```bash
+gh repo sync
+```
+
+This will automatically sync your fork’s `main` with the upstream repository.
+
+---
+
 # Who are we?
 
 Spectrum Web Components is a future-looking project to develop Adobe Spectrum design language based around web components, ES-Modules, and modern browser standards.
